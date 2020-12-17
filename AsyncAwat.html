@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async,Await in Js</title>
+</head>
+<body>
+    <script>
+        
+/*
+Async :- It simply allows us to write promises based code.  Async functions will always return a value. 
+It makes sure that a promise is returned and if it is not returned then javascript 
+automatically wraps it in a promise which is resolved with its value.
+*/
+const getData = async() => { 
+    var data = "Hello World"; 
+    return data; 
+} 
+  
+getData().then(data => console.log(data));
+
+
+
+/* 
+Await :- Await function is used to wait for the promise. It could be used within the async block only. 
+It makes the code wait until the promise returns a result. It only makes the async block wait.
+*/
+/*
+const getData = async() => { 
+    var y = await "Hello World"; 
+    console.log(y); 
+} 
+console.log(1); 
+getData(); 
+console.log(2); 
+
+*/
+    </script>
+</body>
+</html>

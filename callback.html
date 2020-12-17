@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <p>Callbacks are a great way to handle something after something else has been completed.
+        By something here we mean a function execution.
+        If we want to execute a function right after the return of some other function, then callbacks can be used.</p>
+    <script>
+        // add() function is called with arguments a, b 
+        // and callback, callback will be executed just  
+        // after ending of add() function 
+        function add(a, b,cb) {
+            document.write(`The sum of ${a} and ${b} is ${a + b}.` + "<br>");
+            cb();
+        }
+        // disp() function is called just 
+        // after the ending of add() function  
+        function disp() {
+            document.write('This must be printed after addition');
+        }
+        // Calling add() function 
+        add(5, 6, disp);
+
+
+        /*
+        Here are the two functions – add(a, b, callback) and disp(). 
+        Here add() is called with the disp() function i.e. passed in as the third argument to the add function along 
+        with two numbers.
+
+        As a result, the add() is invoked with 1, 2 and the disp() which is the callback. 
+        The add() prints the addition of the two numbers and as soon as that is done, the callback function is fired! 
+        Consequently, we see whatever is inside the disp() as the output below the addition output.
+        */
+    </script>
+<br><br>
+    <!--Alternate Way To Implement The Above Code-->
+    <script> 
+  
+        // add() function is called with arguments a, b 
+        // and callback, callback will be executed just  
+        // after ending of add() function 
+        function add(a, b , callback){ 
+        document.write(`The sum of ${a} and ${b} is ${a+b}.` +"<br>"); 
+        callback(); 
+        } 
+        
+        // add() function is called with arguments given below 
+        add(5,6,function disp(){ 
+        document.write('This must be printed after addition.'); 
+        });      
+          
+     </script> 
+     <br><br>
+     <script>
+         function sub(x, y, cb) {
+             document.write(`Sub of ${x} and ${y} is ${x-y}.` +"<br>");
+             cb();
+         }
+         sub(10,5,function show(){
+             document.write(`Subtraction Must Be Printed Before Show().`);
+         });
+     </script>
+     <br><br>
+     <script>
+         function mul(c,d,cback) {
+             document.write(`Mul of ${c} and ${d} is ${c*d}.` +"<br>");
+             cback();
+         }
+         function display() {
+             document.write('This Must Be Printed After Multiplication');
+         }
+         mul(5,5,display);
+     </script>
+</body>
+
+</html>

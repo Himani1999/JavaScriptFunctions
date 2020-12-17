@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="demo"></p>
+<script src="index.js" type="text/javascript"></script>
+
+<button type="button" onclick="document.write(6 + 6)">Try it</button>
+
+<p id="click">hello World!!!!!</p>
+<button type="button" onclick="myFunc()">Click Here</button>
+
+<p id="a"></p>
+<p id="b"></p>
+<p id="z"></p>
+<button type="button" onclick="abc()">Sum</button>
+
+</body>
+</html>  
+-->
+
+
+
+
+<script>
+
+
+
+/*
+Async :- It simply allows us to write promises based code.  Async functions will always return a value. 
+It makes sure that a promise is returned and if it is not returned then javascript 
+automatically wraps it in a promise which is resolved with its value.
+*/
+const getData = async() => { 
+    var data = "Hello World"; 
+    return data; 
+} 
+  
+getData().then(data => console.log(data));
+
+
+/* 
+Await :- Await function is used to wait for the promise. It could be used within the async block only. 
+It makes the code wait until the promise returns a result. It only makes the async block wait.
+*/
+/*
+const getData = async() => { 
+    var y = await "Hello World"; 
+    console.log(y); 
+} 
+  
+console.log(1); 
+getData(); 
+console.log(2); 
+
+*/
+
+
+/*
+Promises :- 
+*/
+var promise = new Promise(function(resolve, reject) { 
+  const x = "geeksforgeeks"; 
+  const y = "geeksforgeeks"
+  if(x === y) { 
+    resolve(); 
+  } else { 
+    reject(); 
+  } 
+}); 
+  
+promise. 
+    then(function () { 
+        console.log('Success, You are a GEEK'); 
+    }). 
+    catch(function () { 
+        console.log('Some error has occured'); 
+    }); 
+</script>
+
+</body>
+</html>
